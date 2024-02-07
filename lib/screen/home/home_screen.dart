@@ -43,11 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           backgroundImage: FileImage(File(studentModel[index].image!))),
                           Column(
                             children: [
-                              Text(studentModel[index].name!,style: TextStyle(fontWeight: FontWeight.bold),),
-                              SizedBox(height: 15,),
-                              Text(studentModel[index].grId!,style: TextStyle(fontWeight: FontWeight.bold),),
-                              SizedBox(height: 15,),
-                              Text(studentModel[index].std!,style: TextStyle(fontWeight: FontWeight.bold),),
+                               Text("Name:\n${studentModel[index].name}",style: TextStyle(fontWeight: FontWeight.bold),),
+                                Text("GR. ID:\n${studentModel[index].grId!}",style: TextStyle(fontWeight: FontWeight.bold),),
+                                Text("Standard:\n${studentModel[index].std!}",style: TextStyle(fontWeight: FontWeight.bold),),
                             ],
                           ),
                           IconButton(onPressed: () {
