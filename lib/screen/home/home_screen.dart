@@ -32,15 +32,15 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               studentModel.length != 0 ? Expanded(
                   child: ListView.builder(itemBuilder: (context, index) =>
-                      Container(
+                     Container(
                         height: 150, width: 150, color: Colors.black12,
                       padding: EdgeInsets.all(15),
                       margin: EdgeInsets.all(15),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CircleAvatar(radius: 50,
                           backgroundImage: FileImage(File(studentModel[index].image!))),
-                          SizedBox(width: 15,),
                           Column(
                             children: [
                               Text(studentModel[index].name!,style: TextStyle(fontWeight: FontWeight.bold),),
@@ -50,7 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(studentModel[index].std!,style: TextStyle(fontWeight: FontWeight.bold),),
                             ],
                           ),
-                         Spacer(),
                           IconButton(onPressed: () {
                             setState(() {
                               studentModel.removeAt(index);
